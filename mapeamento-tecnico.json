@@ -1,0 +1,100 @@
+{
+  "modelo-3d-cinza.glb": {
+    "arquivo": "modelo-3d-cinza.glb",
+    "n_images": 0,
+    "n_textures": 0,
+    "n_materials": 1,
+    "imagens": [],
+    "materiais": [
+      {
+        "index": 0,
+        "nome": null,
+        "slots": []
+      }
+    ]
+  },
+  "textura-cinza.glb": {
+    "arquivo": "textura-cinza.glb",
+    "n_images": 2,
+    "n_textures": 2,
+    "n_materials": 1,
+    "imagens": [
+      {
+        "index": 0,
+        "nome_gltf": null,
+        "mime": "image/png",
+        "bytes": 11687100,
+        "arquivo_extraido": "textura-cinza__00_img0.png"
+      },
+      {
+        "index": 1,
+        "nome_gltf": null,
+        "mime": "image/png",
+        "bytes": 16365364,
+        "arquivo_extraido": "textura-cinza__01_img1.png"
+      }
+    ],
+    "materiais": [
+      {
+        "index": 0,
+        "nome": "pbr_material",
+        "slots": [
+          {
+            "slot": "Base Color / Albedo",
+            "texture_index": 1,
+            "image_index": 1,
+            "arquivo": "textura-cinza__01_img1.png"
+          },
+          {
+            "slot": "Metallic-Roughness",
+            "texture_index": 0,
+            "image_index": 0,
+            "arquivo": "textura-cinza__00_img0.png"
+          }
+        ]
+      }
+    ]
+  },
+  "textura-color.glb": {
+    "arquivo": "textura-color.glb",
+    "n_images": 2,
+    "n_textures": 2,
+    "n_materials": 1,
+    "imagens": [
+      {
+        "index": 0,
+        "nome_gltf": null,
+        "mime": "image/png",
+        "bytes": 11687100,
+        "arquivo_extraido": "textura-color__00_img0.png"
+      },
+      {
+        "index": 1,
+        "nome_gltf": null,
+        "mime": "image/png",
+        "bytes": 16365364,
+        "arquivo_extraido": "textura-color__01_img1.png"
+      }
+    ],
+    "materiais": [
+      {
+        "index": 0,
+        "nome": "pbr_material",
+        "slots": [
+          {
+            "slot": "Base Color / Albedo",
+            "texture_index": 1,
+            "image_index": 1,
+            "arquivo": "textura-color__01_img1.png"
+          },
+          {
+            "slot": "Metallic-Roughness",
+            "texture_index": 0,
+            "image_index": 0,
+            "arquivo": "textura-color__00_img0.png"
+          }
+        ]
+      }
+    ]
+  }
+}
