@@ -254,3 +254,10 @@ Notas:
 A simulacao de pano (Cloth) se mostrou instavel nesta escala de malha (explodia e o corpo atravessava). Trocada por **balanco de saia via ossos** (`skirt_F/B/L/R` e `cape_L/R`) animados com follow-through acompanhando os passos. Resultado deterministico, sem penetracao, sem quebra, e exportavel para tempo real (glTF). Validado quadro a quadro antes da entrega.
 
 Video: `preview/thalia_skirt.mp4`.
+
+
+## v5.2, roupa estavel (malha unica re-pesada)
+
+Correcao definitiva: NAO separar a roupa (a separacao criava costura/buraco que quebrava na animacao). A malha continua inteira; os vertices da roupa foram **re-pesados** para quadril, tronco e ossos de saia (`skirt_*`, `cape_*`), removendo a influencia das pernas. As pernas se movem por baixo sem distorcer e sem costura. Validado quadro a quadro. Substitui a v5.1.
+
+Video estavel: `preview/thalia_estavel.mp4`.
