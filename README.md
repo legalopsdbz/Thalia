@@ -59,3 +59,24 @@ Observacao tecnica: o gerador nativo do Rigify nao executa neste ambiente automa
 No `Cinza_rig_IK.blend` o modelo esta dividido em dois objetos individuais:
 - **Cinza**: a coruja (corpo, robe).
 - **Pergaminho**: o pergaminho, objeto proprio, selecionavel e editavel a parte. Segue o osso `scroll` (armature), entao continua animavel, mas e um objeto independente.
+
+
+## v1.3, animacoes (movement sets)
+
+Seguindo as movement sheets planejadas. Baixe na Release v1.3:
+- `Cinza_animado.blend`: 7 acoes prontas (Action Editor / NLA).
+- `Cinza_animado.glb`: as 7 animacoes como clipes glTF (abrem em qualquer visualizador glTF).
+
+| Clipe | Movimento |
+|---|---|
+| 01_Idle_Respiracao | parada com respiracao e leve balanco da cabeca (loop) |
+| 02_Caminhada | ciclo de caminhada com passos, balanco de tronco e asas (loop) |
+| 03_Giro | mudanca de direcao, giro do corpo com antecipacao |
+| 04_Gesto_Apresentar | abre a asa apresentando, cabeca acompanha |
+| 04b_Gesto_Saudacao | leve reverencia institucional |
+| 05_Voo | batida de asas e subida (loop) |
+| 06_Pergaminho_Ler | traz o pergaminho a frente e le |
+
+![Caminhada](preview/02_caminhada.gif) ![Pergaminho](preview/06_pergaminho.gif)
+
+Nao incluidos: **05 Expressoes/Olhos/Piscada** e **06 Visemas PTBR** (fala). Sao animacoes faciais e exigem rig de face ou shape keys, que este modelo (malha unica, olhos na textura) nao possui. Para faze-las e preciso um rig facial (o pacote `Rig_Corporal_Facial` da pasta de origem, ou criar shape keys de olhos/bico).
