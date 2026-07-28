@@ -1,4 +1,4 @@
-# Cinza, mascote 3D do DBZ para Blender
+# Thalia, mascote 3D do DBZ para Blender
 
 Coruja mascote do escritorio, com robe e pergaminho. Disponivel como modelo estatico e com **rig** (esqueleto para animar).
 
@@ -80,3 +80,25 @@ Seguindo as movement sheets planejadas. Baixe na Release v1.3:
 ![Caminhada](preview/02_caminhada.gif) ![Pergaminho](preview/06_pergaminho.gif)
 
 Nao incluidos: **05 Expressoes/Olhos/Piscada** e **06 Visemas PTBR** (fala). Sao animacoes faciais e exigem rig de face ou shape keys, que este modelo (malha unica, olhos na textura) nao possui. Para faze-las e preciso um rig facial (o pacote `Rig_Corporal_Facial` da pasta de origem, ou criar shape keys de olhos/bico).
+
+
+## v2.0, rig refinado, facial e pergaminho independente
+
+Baixe na Release **v2.0**: `Thalia_rig.blend` e `Thalia_rig.glb`.
+
+Duas armaduras separadas, sem qualquer vinculo entre si:
+- **ThaliaBodyRig**: corpo (IK de bracos e pernas) + face.
+- **ThaliaScrollRig**: so o pergaminho (`scroll_root` + `scroll_ctrl`). Mover o corpo nao afeta o pergaminho e vice-versa.
+
+Rig facial (no ThaliaBodyRig):
+
+| Osso | Funcao |
+|---|---|
+| beak_lo | maxilar/bico inferior, abre a boca (base para visemas/fala) |
+| brow.L / brow.R | sobrancelhas (surpresa, seriedade) |
+| lid.L / lid.R | palpebras/area dos olhos (piscada e olhar aproximados) |
+| face_ctrl | controle de referencia da face |
+
+![Expressao facial](preview/face-expr.png)
+
+Observacao: os olhos e o bico vem da textura (malha unica), entao piscada, olhar e visemas sao obtidos por deformacao da malha ao redor, com resultado sutil. Para fala e piscada de alta fidelidade, o proximo passo e adicionar **shape keys** (bico aberto/fechado por fonema, palpebra fechada), que dao controle limpo alem dos ossos. Posso adicionar se desejado.
