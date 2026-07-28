@@ -52,3 +52,10 @@ As cadeias de braco e perna resolvem por IK (2 ossos), com pole targets para cot
 ![Pose IK](preview-rig-ik.png)
 
 Observacao tecnica: o gerador nativo do Rigify nao executa neste ambiente automatizado (a classe de parametros do Rigify nao registra em modo headless nesta build). O rig IK acima foi montado manualmente para entregar o mesmo resultado pratico: controladores de IK para bracos e pernas.
+
+
+### Pergaminho como objeto separado (v1.2)
+
+No `Cinza_rig_IK.blend` o modelo esta dividido em dois objetos individuais:
+- **Cinza**: a coruja (corpo, robe).
+- **Pergaminho**: o pergaminho, objeto proprio, selecionavel e editavel a parte. Segue o osso `scroll` (armature), entao continua animavel, mas e um objeto independente.
