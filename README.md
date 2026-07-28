@@ -247,3 +247,10 @@ Video: `preview/thalia_cloth.mp4`.
 Notas:
 - A simulacao de pano e para renders/videos. Para tempo real (glTF/engine), fica o rig de saia (`skirt_*`), que ja controla o tecido sem distorcer.
 - Da para assar (bake) a simulacao e exportar como sequencia, se precisar do balanco fora do Blender.
+
+
+## v5.1++, balanco de roupa por ossos (estavel)
+
+A simulacao de pano (Cloth) se mostrou instavel nesta escala de malha (explodia e o corpo atravessava). Trocada por **balanco de saia via ossos** (`skirt_F/B/L/R` e `cape_L/R`) animados com follow-through acompanhando os passos. Resultado deterministico, sem penetracao, sem quebra, e exportavel para tempo real (glTF). Validado quadro a quadro antes da entrega.
+
+Video: `preview/thalia_skirt.mp4`.
