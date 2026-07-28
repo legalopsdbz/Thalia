@@ -236,3 +236,14 @@ O movimento das pernas estava distorcendo a roupa porque tudo era um mesh so. Co
 - 52 ossos no total (6 novos de saia/capa para controle e balanco do tecido).
 
 ![Roupa em camada, caminhada sem distorcer](preview/roupa_layer.png)
+
+
+## v5.1+, dinamica de pano (Cloth) na roupa
+
+Preview de animacao com **simulacao de pano** na `Roupa`: o tecido colide com o corpo (Collision no `Cinza`), o colarinho fica preso (pin group) e a saia balanca livremente nos passos. Combina a caminhada, o gesto das asas e a fala.
+
+Video: `preview/thalia_cloth.mp4`.
+
+Notas:
+- A simulacao de pano e para renders/videos. Para tempo real (glTF/engine), fica o rig de saia (`skirt_*`), que ja controla o tecido sem distorcer.
+- Da para assar (bake) a simulacao e exportar como sequencia, se precisar do balanco fora do Blender.
