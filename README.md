@@ -102,3 +102,33 @@ Rig facial (no ThaliaBodyRig):
 ![Expressao facial](preview/face-expr.png)
 
 Observacao: os olhos e o bico vem da textura (malha unica), entao piscada, olhar e visemas sao obtidos por deformacao da malha ao redor, com resultado sutil. Para fala e piscada de alta fidelidade, o proximo passo e adicionar **shape keys** (bico aberto/fechado por fonema, palpebra fechada), que dao controle limpo alem dos ossos. Posso adicionar se desejado.
+
+
+## v3.0, shape keys e pergaminho aberto/fechado
+
+Release **v3.0**: `Thalia_rig_v3.blend` e `Thalia_rig_v3.glb` (as shape keys viram morph targets no glTF).
+
+### Coruja, 23 shape keys (Object Data Properties > Shape Keys)
+
+Faciais:
+- `Blink_L`, `Blink_R`: piscada.
+- `Beak_Open`: abre o bico.
+- `Viseme_AA`, `Viseme_OO`, `Viseme_EE`: visemas base para fala.
+- `Brow_Up_L/R`, `Brow_Down_L/R`: sobrancelhas.
+- `Cheek_Smile`: bochechas.
+
+Membros, maos e dedos:
+- `Wing_Spread_L/R`, `Wing_Fold_L/R`: abrir e recolher a asa.
+- `Hand_Grasp_L/R`: fechar a "mao" (ponta da asa).
+- `Fingers_Spread_L/R`: abrir os "dedos"/penas primarias.
+- `Toe_Spread_L/R`, `Toe_Curl_L/R`: dedos e garras do pe.
+
+Cada shape key vai de 0 a 1 e pode ser combinada e animada por keyframes ou drivers.
+
+### Pergaminho, fechado e aberto
+- Shape keys `Fechado` (base) e `Aberto` (desenrola: afina o rolo e alonga).
+- Rig de curvatura proprio: `scroll_root`, `scroll_mid`, `scroll_tip` (na armadura independente `ThaliaScrollRig`), para curvar e animar o pergaminho.
+
+![Shape keys em uso](preview/shape-keys-demo.png)
+
+Nota de fidelidade: como olhos e bico vem da textura, as shape keys faciais deformam a malha ao redor (efeito bom para bico/visema e sobrancelha, mais sutil para piscada). O "Aberto" do pergaminho e uma abertura aproximada por nao existir uma folha plana modelada; da o gesto de desenrolar.
