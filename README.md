@@ -181,3 +181,26 @@ Extrai desse modelo a melhor instancia de **pergaminho aberto** (painel de papel
 - **Edicao completa (rig, pesos, shape keys, IK):** baixe `Thalia_rig_v34.blend` (Release v3.4) e abra no Blender 4.2+.
 
 Observacao: o `Thalia_web.glb` e uma versao leve (malha decimada, texturas 1024, sem morphs) so para inspecao rapida do esqueleto no navegador. O rig completo, shape keys e IK estao no `.blend`.
+
+
+## v4.0, dois pacotes independentes + retopo (game-ready)
+
+Seguindo a estrutura do `project.json` (cena three.js), o modelo foi separado em **dois pacotes que nao se cruzam**, cada um retopologizado, com bake de textura e re-skin do rig:
+
+### Coruja (`Thalia_Coruja`)
+- **30.614 triangulos** (quadriflow, topologia limpa).
+- UV nova + **Base Color e Normal assados** do modelo original de ~1,75 M triangulos (2048).
+- Re-skin no `ThaliaBodyRig` (corpo, IK de bracos/pernas, face) + `Palpebras`.
+- `Thalia_Coruja.glb` (~10 MB) e `Thalia_Coruja.blend`.
+
+![Coruja retopo](preview/pkg_coruja.png)
+
+### Pergaminho (`Thalia_Pergaminho`)
+- **37.336 triangulos** (quadriflow).
+- UV nova + Base Color e Normal assados.
+- Re-skin no `ThaliaScrollRig` (3 ossos ao longo da folha, permite curvar).
+- `Thalia_Pergaminho.glb` (~11 MB) e `Thalia_Pergaminho.blend`.
+
+![Pergaminho retopo](preview/pkg_perg.png)
+
+Cada GLB e leve e abre direto em visualizador web (Babylon Sandbox, gltf-viewer). Observacao: a textura original tem sombreamento assado no albedo, entao o robe simplificado fica um pouco mais escuro que no high-poly; o detalhe fino das penas volta pelo Normal map. Da para retocar a mao se quiser fidelidade total.
