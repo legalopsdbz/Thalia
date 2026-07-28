@@ -204,3 +204,25 @@ Seguindo a estrutura do `project.json` (cena three.js), o modelo foi separado em
 ![Pergaminho retopo](preview/pkg_perg.png)
 
 Cada GLB e leve e abre direto em visualizador web (Babylon Sandbox, gltf-viewer). Observacao: a textura original tem sombreamento assado no albedo, entao o robe simplificado fica um pouco mais escuro que no high-poly; o detalhe fino das penas volta pelo Normal map. Da para retocar a mao se quiser fidelidade total.
+
+
+## v5.0, arte original preservada, mais ossos e preview de animacao
+
+Correcao do estilo: a reducao de poligonos passou a ser por **decimacao (collapse)**, que preserva os UVs e a **textura/arte original**. Nada de rebake, nada de textura nova. Os dois pacotes seguem independentes.
+
+### Coruja (`Thalia_Coruja`)
+- **32.999 triangulos**, textura original intacta.
+- **46 ossos** (12 novos para controle de animacao): `tuft.L/R` (tufos), `tail.C` (cauda), `toe.L/R` (garras), `eye.L/R`, `featherA.L/R` e `featherB.L/R` (penas da asa), `beak_up`. Somados aos ja existentes de corpo, IK e face.
+
+![Coruja v5](preview/coruja_v5.png)
+
+### Pergaminho (`Thalia_Pergaminho`)
+- **32.999 triangulos**, textura original intacta.
+- Rig de **6 ossos em cadeia** ao longo da folha, para curvar e ondular.
+
+![Pergaminho v5](preview/perg_v5.png)
+
+### Preview de animacao (andando + gesticulando + falando)
+Mascote em movimento combinado: ciclo de caminhada, gesto das asas e bico articulando a fala, tudo ao mesmo tempo.
+
+![Preview de animacao](preview/anim_preview.gif)
