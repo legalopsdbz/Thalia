@@ -31,3 +31,24 @@ Pesos atribuidos por regiao (skinning procedural), validados no Blender: cada os
 ## Texturas
 
 Material unico `pbr_material` (PBR Metallic-Roughness), duas texturas 4096x4096: Base Color (sRGB) e Metallic-Roughness (Non-Color, Verde=Roughness, Azul=Metallic). Ja embutidas nos arquivos.
+
+
+## v1.2, rig com IK (bracos e pernas)
+
+Baixe `Cinza_rig_IK.blend` na Release v1.2. Abra, selecione a armadura `CinzaRigIK`, entre em **Pose Mode** e anime pelos controladores:
+
+| Controlador | Funcao |
+|---|---|
+| hand_ik.L / hand_ik.R | alvo IK das asas/bracos (mova para posicionar a mao) |
+| elbow_pole.L / .R | direcao do cotovelo |
+| foot_ik.L / foot_ik.R | alvo IK dos pes (mova para o passo) |
+| knee_pole.L / .R | direcao do joelho |
+| torso | controle geral do tronco (COG) |
+| head_ctrl | rotacao da cabeca |
+| scroll | pergaminho |
+
+As cadeias de braco e perna resolvem por IK (2 ossos), com pole targets para cotovelo e joelho. Skinning por regiao validado no Blender.
+
+![Pose IK](preview-rig-ik.png)
+
+Observacao tecnica: o gerador nativo do Rigify nao executa neste ambiente automatizado (a classe de parametros do Rigify nao registra em modo headless nesta build). O rig IK acima foi montado manualmente para entregar o mesmo resultado pratico: controladores de IK para bracos e pernas.
