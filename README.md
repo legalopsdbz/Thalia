@@ -132,3 +132,12 @@ Cada shape key vai de 0 a 1 e pode ser combinada e animada por keyframes ou driv
 ![Shape keys em uso](preview/shape-keys-demo.png)
 
 Nota de fidelidade: como olhos e bico vem da textura, as shape keys faciais deformam a malha ao redor (efeito bom para bico/visema e sobrancelha, mais sutil para piscada). O "Aberto" do pergaminho e uma abertura aproximada por nao existir uma folha plana modelada; da o gesto de desenrolar.
+
+
+## v3.1, palpebras modeladas (piscada real)
+
+Novo objeto **Palpebras** (calotas superior e inferior por olho), material periocular, segue a cabeca. Piscada por shape keys `Blink_L` e `Blink_R` (0 a 1). Abertas, as palpebras ficam recuadas atras das penas (nao aparecem); fechadas, cobrem os olhos. Ha o objeto separado, entao nao interfere nas 23 shape keys da coruja.
+
+![Piscada: aberto, meio, fechado](preview/blink.png)
+
+As shape keys `Blink_L/R` que ja existiam na malha da coruja continuam para o vinco ao redor; a cobertura efetiva do olho agora vem da geometria de palpebra.
