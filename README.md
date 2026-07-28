@@ -226,3 +226,13 @@ Correcao do estilo: a reducao de poligonos passou a ser por **decimacao (collaps
 Mascote em movimento combinado: ciclo de caminhada, gesto das asas e bico articulando a fala, tudo ao mesmo tempo.
 
 ![Preview de animacao](preview/anim_preview.gif)
+
+
+## v5.1, roupa em camada separada (dinamica melhorada)
+
+O movimento das pernas estava distorcendo a roupa porque tudo era um mesh so. Correcao: a roupa virou **objeto/camada proprio** (`Roupa`, ~6,2k verts), re-skinado apenas ao tronco e a uma **saia de ossos** (`skirt_F/B/L/R` + `cape_L/R`), sem qualquer peso das pernas. Agora as pernas se movem por baixo e o tecido mantem a forma.
+
+- Camadas separadas: `Cinza` (corpo) e `Roupa` (tecido), mesma textura/arte original.
+- 52 ossos no total (6 novos de saia/capa para controle e balanco do tecido).
+
+![Roupa em camada, caminhada sem distorcer](preview/roupa_layer.png)
