@@ -154,3 +154,12 @@ As shape keys `Blink_L/R` que ja existiam na malha da coruja continuam para o vi
 ![Folha aberta](preview/pergaminho_folha.png)
 
 Verificacao das demais modelagens: shape keys faciais (bico/visemas/sobrancelhas) e de membros/maos/dedos conferidas, sem quebras.
+
+
+## v3.3, pergaminho pelo modelo 3D real
+
+Verificacao do conteudo atualizado da pasta de referencia: o arquivo `Hitem3d-*.glb` enviado e uma **reconstrucao 3D da folha de referencia inteira**, ou seja, a grade com as 24 poses do pergaminho, cada uma como geometria solta (nao e um pergaminho unico pronto).
+
+Extrai desse modelo a melhor instancia de **pergaminho aberto** (painel de papel texturizado, com roletes enrolados, cordao e selo de cera), limpei, recentrei e integrei ao projeto como `Pergaminho_Folha`, substituindo a folha que eu havia modelado a mao. Fica posicionada acima da coruja; o rolo fechado `Pergaminho` permanece no projeto.
+
+![Pergaminho real integrado](preview/pergaminho_real.png)
