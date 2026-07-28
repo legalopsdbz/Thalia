@@ -163,3 +163,21 @@ Verificacao do conteudo atualizado da pasta de referencia: o arquivo `Hitem3d-*.
 Extrai desse modelo a melhor instancia de **pergaminho aberto** (painel de papel texturizado, com roletes enrolados, cordao e selo de cera), limpei, recentrei e integrei ao projeto como `Pergaminho_Folha`, substituindo a folha que eu havia modelado a mao. Fica posicionada acima da coruja; o rolo fechado `Pergaminho` permanece no projeto.
 
 ![Pergaminho real integrado](preview/pergaminho_real.png)
+
+
+## v3.4, piscada corrigida e acesso publico
+
+**Palpebras (correcao definitiva).** Removi a geometria antiga (que aparecia como bolas claras). As novas palpebras sao calotas rasas, centradas na iris real (deteccao na malha), com material cor de pena. Abertas ficam escondidas dentro da cabeca (olhos limpos); fechadas (`Blink_L`/`Blink_R` no objeto `Palpebras`) cobrem os olhos e leem como olhos fechados.
+
+![Olhos fechados](preview/blink_fixed.png)
+
+## Como verificar/editar o rig
+
+- **Repositorio (publico):** https://github.com/legalopsdbz/Thalia
+- **Inspecao no navegador (rig/esqueleto):** baixe `Thalia_web.glb` (15 MB, na Release v3.4) e arraste em um destes visualizadores:
+  - Babylon Sandbox: https://sandbox.babylonjs.com/  (mostra esqueleto, ossos e morph)
+  - glTF Viewer: https://gltf-viewer.donmccurdy.com/
+  - three.js editor (permite editar cena): https://threejs.org/editor/
+- **Edicao completa (rig, pesos, shape keys, IK):** baixe `Thalia_rig_v34.blend` (Release v3.4) e abra no Blender 4.2+.
+
+Observacao: o `Thalia_web.glb` e uma versao leve (malha decimada, texturas 1024, sem morphs) so para inspecao rapida do esqueleto no navegador. O rig completo, shape keys e IK estao no `.blend`.
