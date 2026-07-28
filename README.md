@@ -141,3 +141,16 @@ Novo objeto **Palpebras** (calotas superior e inferior por olho), material perio
 ![Piscada: aberto, meio, fechado](preview/blink.png)
 
 As shape keys `Blink_L/R` que ja existiam na malha da coruja continuam para o vinco ao redor; a cobertura efetiva do olho agora vem da geometria de palpebra.
+
+
+## v3.2, piscada corrigida e folha do pergaminho
+
+**Correcao da piscada** (a versao anterior deixava as palpebras como bolas salientes): remodeladas como calotas rasas, centradas na iris real (x=+-0.078, z=0.25), curvatura seguindo o olho. Abertas, recuam para dentro da cabeca e ficam invisiveis (estilo membrana nictitante, que corujas tem); fechadas, cobrem os olhos. Shape keys `Blink_L/R` no objeto `Palpebras`.
+
+![Piscada corrigida: aberto, meio, fechado](preview/blink_v2.png)
+
+**Folha do pergaminho** (`Pergaminho_Folha`): geometria da folha aberta seguindo a sheet de referencia, painel plano com roletes de madeira em cima e embaixo, ponteiras, cordao e selo de cera. Objeto proprio, posicionado a frente do rolo (o rolo fechado `Pergaminho` continua no projeto).
+
+![Folha aberta](preview/pergaminho_folha.png)
+
+Verificacao das demais modelagens: shape keys faciais (bico/visemas/sobrancelhas) e de membros/maos/dedos conferidas, sem quebras.
