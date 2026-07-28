@@ -1,24 +1,33 @@
-# Cinza, modelo 3D para Blender
+# Cinza, mascote 3D do DBZ para Blender
+
+Coruja mascote do escritorio, com robe e pergaminho. Disponivel como modelo estatico e com **rig** (esqueleto para animar).
 
 ## Como abrir
 
-Duas opcoes, ambas abrem no Blender:
+Baixe na aba **Releases**:
 
-1. **Cinza.blend** (formato nativo do Blender, recomendado). Baixe na aba **Releases** deste repositorio e abra com **File > Open** ou dando duplo clique. Ja vem com malha, material e as duas texturas empacotadas dentro do arquivo. Nao precisa de mais nada.
+- **v1.1 (com rig)** — recomendado para animar:
+  - `Cinza_rigged.blend`: abre direto no Blender (File > Open). Malha, material, texturas empacotadas e a armadura `CinzaRig`.
+  - `Cinza_rigged.glb`: glTF 2.0 com skin (15 joints). Importe por File > Import > glTF 2.0.
+- **v1.0 (sem rig)**: `Cinza.blend` e `Cinza.glb`, so o modelo.
 
-2. **Cinza.glb** (glTF 2.0). No Blender: **File > Import > glTF 2.0 (.glb/.gltf)** e selecione o arquivo. As texturas estao embutidas e o importador liga os nos automaticamente.
+## Rig (esqueleto)
 
-O modelo e uma malha estatica (cerca de 1 milhao de vertices), material PBR unico chamado `pbr_material`. Nao tem esqueleto (rig) nem animacao.
+Armadura `CinzaRig`, 15 ossos, pronta em Pose Mode:
 
-## Arquivos
+| Osso | Controla |
+|---|---|
+| root | raiz geral |
+| pelvis, spine, chest | tronco (inclinar, curvar) |
+| neck, head | pescoco e cabeca (virar, inclinar) |
+| arm.L / arm.R | asas / bracos laterais |
+| thigh.L/R, shin.L/R | pernas sob o robe |
+| scroll | pergaminho flutuante |
 
-- `Cinza.glb` (arvore do repositorio): importavel no Blender.
-- `Cinza.blend` (Release v1.0): arquivo nativo, abre direto, texturas empacotadas.
-- `mapeamento-tecnico.json`: dump do glTF (imagens, texturas, material).
+Pesos atribuidos por regiao (skinning procedural), validados no Blender: cada osso deforma sua area sem rasgar a malha. Modelo sem animacao pronta; o esqueleto e a base para criar as poses e keyframes.
+
+![Pose de teste](preview-rig-pose.png)
 
 ## Texturas
 
-| Slot | Espaco de cor | Observacao |
-|---|---|---|
-| Base Color / Albedo | sRGB | cor difusa |
-| Metallic-Roughness | Non-Color | Verde = Roughness, Azul = Metallic |
+Material unico `pbr_material` (PBR Metallic-Roughness), duas texturas 4096x4096: Base Color (sRGB) e Metallic-Roughness (Non-Color, Verde=Roughness, Azul=Metallic). Ja embutidas nos arquivos.
